@@ -3,7 +3,202 @@ guid: ac67001ef72c08b4c93af536936a1e5b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balka
+    second: {fileID: 2100000, guid: 446c2a998fd67924182addd21f49ea6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black Full
+    second: {fileID: 2100000, guid: 899c82750a2677d45b366917d990793b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black Glass
+    second: {fileID: 2100000, guid: ad2a3583f64b0834fbd6b5c4717dab1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black Plactic
+    second: {fileID: 2100000, guid: 2e5a5c9ef891b5546abe22ef4e340cb5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue Paint
+    second: {fileID: 2100000, guid: b205e0c06a61fcb499db97c2fa0fca27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box Yellow
+    second: {fileID: 2100000, guid: c7e6658ce5f08f54199d999193e80331, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Boxes
+    second: {fileID: 2100000, guid: 44e0d0e4f6ed8054a9a9208223c75ea3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brick
+    second: {fileID: 2100000, guid: c0bedbad8893bed4ab23d9339e30cf1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cart Blue
+    second: {fileID: 2100000, guid: 848b71e85be81fe4080a8c32ff22662b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cart Cover
+    second: {fileID: 2100000, guid: a4744bbeaace76446b817cc2fb814a12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cart Sky
+    second: {fileID: 2100000, guid: 12488663f00d3f1489769f009a99d4d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cart Yellow
+    second: {fileID: 2100000, guid: 01f9aa8c06f898b479a766edf5b22703, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cover
+    second: {fileID: 2100000, guid: afd214b9e295873429debb56f0444572, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dendy Gray
+    second: {fileID: 2100000, guid: 0bc24cb5b8413ac4aafd82e1105a3836, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dendy Red
+    second: {fileID: 2100000, guid: 4324daa79ea07cd488253069a1efaf08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dendy White
+    second: {fileID: 2100000, guid: 23ead64c5ec294944a29ef11cbe6d4fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 522371a24d589e844bbf55f6ab87088b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gardina
+    second: {fileID: 2100000, guid: 4f7cc5139a385fd41b6193a0d0042aa1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold
+    second: {fileID: 2100000, guid: 3d7cd60e5b5d2354b8fde0c2fa8cc37d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ground
+    second: {fileID: 2100000, guid: a5553c9d1b15df441bf8770cb15138c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light White
+    second: {fileID: 2100000, guid: 0323fd269c4e5e348b6faf9a689254d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light Wood
+    second: {fileID: 2100000, guid: ce4c795810ee7a74087af2da4669366b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metall
+    second: {fileID: 2100000, guid: ddfe1b27fc4acc0468b523fb9e817426, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Old Plastic
+    second: {fileID: 2100000, guid: 2eebdd535facf2e44bc4902ba3cbc3a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Owner
+    second: {fileID: 2100000, guid: 6961e7dd7bad6f94f8ce9819499c48dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plant
+    second: {fileID: 2100000, guid: 385fbeb8571c6d94cbcb310c56f8c36a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Podushka
+    second: {fileID: 2100000, guid: 4560215e01a831344bb60f1753cecfb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Posters
+    second: {fileID: 2100000, guid: de107a1aa09786646808114765bef49c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Cloth
+    second: {fileID: 2100000, guid: 27de0b854fcf6fb478c2444803df89a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Paint
+    second: {fileID: 2100000, guid: e301effc212f80648957bd04780276b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shtori
+    second: {fileID: 2100000, guid: 230947edfb22d9d4480c8d6ef410c9e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TMNT
+    second: {fileID: 2100000, guid: 846afa8b9790a8e4a85de1e673e4f96e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TV Scren
+    second: {fileID: 2100000, guid: 54af52f914042bb46aece39be8e411fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Velikiy D
+    second: {fileID: 2100000, guid: 9a0cb5a57bc3e644f872d726e649e519, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall
+    second: {fileID: 2100000, guid: e601b2f3ad2b8324f8fc58c6ad0abdd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallPapper
+    second: {fileID: 2100000, guid: dbf144d7a7de7194b963baa88994a783, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White Paint Clear
+    second: {fileID: 2100000, guid: 1e593a2ab6d32c4419e34f41c502b125, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood Dark
+    second: {fileID: 2100000, guid: 1f645e3fbe11fc844ad970e97a4a7b2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u041A\u043E\u0432\u0451\u0440"
+    second: {fileID: 2100000, guid: ab83feeefd1ac3f449554e20e319723f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
