@@ -143,6 +143,12 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.yildirim.ttool": {
+      "version": "file:C:/Users/selah_pj69hy/Documents/GitHub/TTool/Packages/TTool",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
