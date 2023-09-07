@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundManager : MonoBehaviour
+public class SoundManager : SingletonDestroyMono<SoundManager>
 {
-    AudioClip tvZip;
-    AudioClip lightSwitch;
-    List<AudioClip> tvShows = new List<AudioClip>();
+    public AudioClip tvZip;
+    public AudioClip lightSwitch;
+    public List<AudioClip> tvShows = new List<AudioClip>();
 }

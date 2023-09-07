@@ -10,7 +10,8 @@ public class TvController : MonoBehaviour, IClickable
     [SerializeField]
     List<Texture> tvScreenImgList = new List<Texture>();
     Texture tvScreenImage;
-    int currentIndex = 0;
+    int currentTextureIndex = 0;
+    int currentAudioClipIndex = 0;
 
     [SerializeField]
     MeshRenderer tvPanel;
@@ -23,9 +24,7 @@ public class TvController : MonoBehaviour, IClickable
     }
     public void Click()
     {
-        //ToDo:
-        //Click sesi
-        //Ve değisen kanala gore yeni tv sesi
+        gameObject.GetOrAdComponent<AudioSource>().PlayOneShot(SoundManager.Instance.tvZip);
         TvZip(tvPanel.material);
     }
 
@@ -45,7 +44,6 @@ public class TvController : MonoBehaviour, IClickable
 
     void RandomTvLightIntensity(float time)
     {
-
         float innerAngle = Random.Range(40f, 60f);
         float outerAngle = innerAngle + 20;
         spotLight.innerSpotAngle = innerAngle;
@@ -67,8 +65,11 @@ public class TvController : MonoBehaviour, IClickable
 
     void TvZip(Material material)
     {
-        tvScreenImage = tvScreenImgList.NextItem(ref currentIndex);
+        tvScreenImage = tvScreenImgList.NextItem(ref currentTextureIndex);
         material.SetTexture("_EmissionMap", tvScreenImage);
         material.EnableKeyword("_EMISSION");
+
+        gameObject.GetComponent<AudioSource>().clip = (SoundManager.Instance.tvShows.NextItem(ref currentAudioClipIndex));
+        gameObject.GetComponent<AudioSource>().Play();
     }
 }

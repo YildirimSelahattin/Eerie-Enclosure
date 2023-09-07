@@ -9,6 +9,8 @@ public class LightSwitchController : MonoBehaviour, IClickable
 
     public void Click()
     {
+        gameObject.GetOrAdComponent<AudioSource>().PlayOneShot(SoundManager.Instance.lightSwitch);
+        
         if(roomLight.active)
         {
             roomLight.SetActive(false);
