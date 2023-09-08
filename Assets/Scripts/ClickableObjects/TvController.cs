@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class TvController : MonoBehaviour, IClickable
 {
     public Light spotLight;
     List<float> numberList = new List<float> { .1f, .2f, .4f, .7f };
-    
+
     [SerializeField]
     List<Texture> tvScreenImgList = new List<Texture>();
     Texture tvScreenImage;
@@ -17,6 +18,8 @@ public class TvController : MonoBehaviour, IClickable
     MeshRenderer tvPanel;
 
     public float screenSpeed = 2f;
+
+    int flag = 0;
 
     void Start()
     {
@@ -31,14 +34,20 @@ public class TvController : MonoBehaviour, IClickable
     public void Click()
     {
         gameObject.GetOrAdComponent<AudioSource>().PlayOneShot(SoundManager.Instance.tvZip);
-        TvZip(tvPanel.material);
+
+        Action selectedAction = (flag == tvScreenImgList.Count) ? TvOff : TvZip;
+        selectedAction.Invoke();
     }
 
-    void TvZip(Material material)
+    void TvZip()
     {
+        flag++;
+        tvPanel.material.SetColor("_EmissionColor", Color.white);
+        spotLight.gameObject.SetActive(true);
+
         tvScreenImage = tvScreenImgList.NextItem(ref currentTextureIndex);
-        material.SetTexture("_EmissionMap", tvScreenImage);
-        material.EnableKeyword("_EMISSION");
+        tvPanel.material.SetTexture("_EmissionMap", tvScreenImage);
+        tvPanel.material.EnableKeyword("_EMISSION");
 
         AudioSource sound = gameObject.GetComponent<AudioSource>();
         sound.clip = (SoundManager.Instance.tvShows.NextItem(ref currentAudioClipIndex));
@@ -57,7 +66,7 @@ public class TvController : MonoBehaviour, IClickable
 
     void RandomTvLightIntensity(float time)
     {
-        float innerAngle = Random.Range(40f, 60f);
+        float innerAngle = UnityEngine.Random.Range(40f, 60f);
         float outerAngle = innerAngle + 20;
         spotLight.innerSpotAngle = innerAngle;
         spotLight.spotAngle = outerAngle;
@@ -76,5 +85,13 @@ public class TvController : MonoBehaviour, IClickable
         tvPanel.materials[0].mainTextureOffset += new Vector2(screenSpeed * Time.deltaTime, 0f);
     }
 
-
+    [ContextMenu("TvOff")]
+    void TvOff()
+    {
+        flag = 0;
+        StopAllCoroutines();
+        gameObject.GetComponent<AudioSource>().Stop();
+        tvPanel.material.SetColor("_EmissionColor", Color.black);
+        spotLight.gameObject.SetActive(false);
+    }
 }

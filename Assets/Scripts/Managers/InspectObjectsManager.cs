@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class InspectObjectsManager : MonoBehaviour
 {
-    public Transform inspectArea;
     public LayerMask inspectLayer;
-    public Camera cam;
-    public float mouseButtonRotateSpeed = 125f;
+    [SerializeField] Transform inspectArea;
+    [SerializeField] Camera cam;
+    [SerializeField] float mouseButtonRotateSpeed = 125f;
 
     private Vector3 originalPosition;
     private Quaternion originalRotation;
@@ -37,10 +37,7 @@ public class InspectObjectsManager : MonoBehaviour
 
     private void TryPickupItem()
     {
-        if (isInspecting)
-        {
-            return;
-        }
+        if (isInspecting) return;
 
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, inspectLayer))
@@ -53,7 +50,6 @@ public class InspectObjectsManager : MonoBehaviour
         }
     }
 
-
     private void PickupItem()
     {
         inspectedObject.transform.SetParent(inspectArea);
@@ -62,7 +58,7 @@ public class InspectObjectsManager : MonoBehaviour
     private void MoveAndRotateInspectedObject()
     {
         inspectedObject.transform.position = Vector3.Lerp(inspectedObject.transform.position, inspectArea.position, 0.2f);
-        inspectArea.Rotate(new Vector3(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0) * Time.deltaTime * mouseButtonRotateSpeed);
+        inspectArea.Rotate(new Vector3(0, Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * Time.deltaTime * mouseButtonRotateSpeed);
     }
 
     private void MoveObjectBackToOriginalPosition()

@@ -6,6 +6,7 @@ public class ClickableObjectManager : MonoBehaviour
 {
     [SerializeField]
     Camera mainCamera;
+    public LayerMask clickLayer;
 
     void Update()
     {
@@ -13,7 +14,7 @@ public class ClickableObjectManager : MonoBehaviour
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, clickLayer))
             {
                 IClickable clickable = hit.collider.GetComponent<IClickable>();
                 if (clickable != null)
