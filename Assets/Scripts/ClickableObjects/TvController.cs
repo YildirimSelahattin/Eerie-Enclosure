@@ -22,10 +22,28 @@ public class TvController : MonoBehaviour, IClickable
     {
         StartCoroutine(RandomTvLight());
     }
+
+    void Update()
+    {
+        ScroolScreen();
+    }
+
     public void Click()
     {
         gameObject.GetOrAdComponent<AudioSource>().PlayOneShot(SoundManager.Instance.tvZip);
         TvZip(tvPanel.material);
+    }
+
+    void TvZip(Material material)
+    {
+        tvScreenImage = tvScreenImgList.NextItem(ref currentTextureIndex);
+        material.SetTexture("_EmissionMap", tvScreenImage);
+        material.EnableKeyword("_EMISSION");
+
+        AudioSource sound = gameObject.GetComponent<AudioSource>();
+        sound.clip = (SoundManager.Instance.tvShows.NextItem(ref currentAudioClipIndex));
+        sound.loop = true;
+        sound.Play();
     }
 
     IEnumerator RandomTvLight()
@@ -35,11 +53,6 @@ public class TvController : MonoBehaviour, IClickable
         SetEmissionIntensity(tvPanel.material, time);
         yield return new WaitForSeconds(time);
         StartCoroutine(RandomTvLight());
-    }
-
-    void Update()
-    {
-        ScroolScreen();
     }
 
     void RandomTvLightIntensity(float time)
@@ -63,13 +76,5 @@ public class TvController : MonoBehaviour, IClickable
         tvPanel.materials[0].mainTextureOffset += new Vector2(screenSpeed * Time.deltaTime, 0f);
     }
 
-    void TvZip(Material material)
-    {
-        tvScreenImage = tvScreenImgList.NextItem(ref currentTextureIndex);
-        material.SetTexture("_EmissionMap", tvScreenImage);
-        material.EnableKeyword("_EMISSION");
 
-        gameObject.GetComponent<AudioSource>().clip = (SoundManager.Instance.tvShows.NextItem(ref currentAudioClipIndex));
-        gameObject.GetComponent<AudioSource>().Play();
-    }
 }
