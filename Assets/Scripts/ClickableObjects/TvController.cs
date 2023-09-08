@@ -6,7 +6,7 @@ public class TvController : MonoBehaviour, IClickable
 {
     public Light spotLight;
     List<float> numberList = new List<float> { .1f, .2f, .4f, .7f };
-
+    
     [SerializeField]
     List<Texture> tvScreenImgList = new List<Texture>();
     Texture tvScreenImage;

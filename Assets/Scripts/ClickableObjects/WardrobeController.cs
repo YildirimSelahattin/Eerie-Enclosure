@@ -34,8 +34,5 @@ public class WardrobeController : MonoBehaviour, IClickable
         {
             leftDoor.transform.DORotate(closeDoorRotation, 1f).OnComplete(()=>{isDoorOpen = false;});
         }
-
     }
-
-
 }
